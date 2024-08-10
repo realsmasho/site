@@ -46,7 +46,7 @@ h2 {
     margin-bottom: 16px;
 }
 
-h2.card-header {
+.card-header {
     font-size: 28px;
     line-height: 1;
     margin-top: 32px;
@@ -162,7 +162,7 @@ a:visited {color:#ff76ea}
 
 /* DIVIDERS */
 
-hr.rounded {
+.rounded {
     border: 1px solid #434656; /* 30% */
     border-radius: 8px;
     margin-top: 48px;
@@ -185,13 +185,13 @@ hr.rounded {
 
 /* IMAGES */
 
-img.pfp {
+.pfp {
     width: 50%;
     height: 256px;
     border-radius: 100%;
 }
 
-img.banner {
+.banner {
     width: 100%;
     height: 128px;
     border-radius: 16px;
@@ -247,7 +247,7 @@ img.banner {
 
 /* DIV */
 
-div.item {
+.item {
     background-color: #22232a; /* 15% */
     border-width: 8px;
     border-color: #5b5e71; /* 40% */
@@ -264,7 +264,7 @@ div.item {
 
 }
 
-div.grid {
+.grid {
     display: grid;
     column-gap: 16px;
     row-gap: 16px;

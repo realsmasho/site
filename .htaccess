@@ -1,0 +1,12 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW ERRORPAGEID:7Ye9HDHlfC
+ErrorDocument 404 /404.html
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE 7Ye9HDHlfC:ERRORPAGEID
+
+#remove html file extension https://example.com/page.html
+# to https://example.com/page
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC, L]

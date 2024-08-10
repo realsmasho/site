@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-us">
+<html>
+    <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX6QS1L24J"></script>
+        <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-EX6QS1L24J');</script>
+        <title>Fanart</title>
+        <meta name="description" content="This page is still under construction. Check back later!">
+        <meta name="keywords" content="smasho, meme wars">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="preload" href="style.css" as="style">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image" href="/assets/smasho_transparent.png">
+        <script src="scripts.js"></script>
+        <script src="https://kit.fontawesome.com/1ae3166fc9.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <h5 class="path"><a href="https://smasho.xyz/">Home</a> > <a href="https://smasho.xyz/fanart.html">Fanart</a></h5>
+
+        <h1>Fanart</h1>
+        <p style="margin-bottom: 32px">This page is still under construction. Check back later!</p>
+        <img src="/assets/fanart/waitingforsmashotopost.png" alt="waiting for smasho to post" style="max-width: 100%; border-radius: 16px">
+
+        <script>
+            dragElement(document.getElementById("draggable"));
+
+            function dragElement(elmnt) {
+                var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+                if (document.getElementById(elmnt.id + "a")) {
+                    /* if present, the header is where you move the DIV from:*/
+                    document.getElementById(elmnt.id + "a").onmousedown = dragMouseDown;
+                } else {
+                    /* otherwise, move the DIV from anywhere inside the DIV:*/
+                    elmnt.onmousedown = dragMouseDown;
+                }
+
+                function dragMouseDown(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // get the mouse cursor position at startup:
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    document.onmouseup = closeDragElement;
+                    // call a function whenever the cursor moves:
+                    document.onmousemove = elementDrag;
+                }
+
+                function elementDrag(e) {
+                    e = e || window.event;
+                    e.preventDefault();
+                    // calculate the new cursor position:
+                    pos1 = pos3 - e.clientX;
+                    pos2 = pos4 - e.clientY;
+                    pos3 = e.clientX;
+                    pos4 = e.clientY;
+                    // set the element's new position:
+                    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+                }
+
+                function closeDragElement() {
+                    /* stop moving when mouse button is released:*/
+                    document.onmouseup = null;
+                    document.onmousemove = null;
+                }
+            }
+        </script> 
+    </body>
+</html>
