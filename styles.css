@@ -173,12 +173,8 @@ a:visited {color:#ff76ea}
 
 /* ICONS */
 
-#fa.solid {
-    padding-right: 32px;
-}
-
-#fa.brands {
-    padding-right: 32px;
+#fa {
+    padding-right: 16px;
 }
 
 
