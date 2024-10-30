@@ -2,11 +2,11 @@ from flask import Flask, send_file, request
 from PIL import Image, ImageDraw, ImageFont
 import io
 
+app = Flask(__name__)
+
 import os
 port = int(os.environ.get("PORT", 5000))
 app.run(host="0.0.0.0", port=port)
-
-app = Flask(__name__)
 
 # Endpoint to create a profile card
 @app.route('/profile-card', methods=['GET'])
