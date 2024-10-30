@@ -9,8 +9,8 @@ port = int(os.environ.get("PORT", 5000))
 app.run(host="0.0.0.0", port=port)
 
 # Endpoint to create a profile card
-@app.route('/profile-card', methods=['GET'])
-def generate_profile_card():
+@app.route('/profile-card', methods=['GET', 'POST'])
+def profile_card():
     # Get parameters from the request
     username = request.args.get('username', 'Guest')
     messages = request.args.get('messages', '0')
